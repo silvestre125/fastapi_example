@@ -2,8 +2,6 @@ version: "3.9"
 services:
   api:
     build: .
-    volumes:
-      - api_volume:/code
     ports:
       - "8080:8080"
     restart: unless-stopped
@@ -13,5 +11,3 @@ services:
       timeout: 5s
       retries: 10
       start_period: 5s
-volumes:
-  api_volume:
